@@ -72,8 +72,7 @@ class FireGento_Logger_Model_Manager extends Varien_Object
             }
         }
         $newCfg = implode(",", $oldCfg);
-        //$cfg = new Mage_Core_Model_Config();
-        $cfg = new Polo_Setup_Model_Core_Config();
+        $cfg = new Mage_Core_Model_Config();
         $cfg ->saveConfig('dev/log/disabled_modules', $newCfg, 'default', 0);
         return $this;
     }
